@@ -19,7 +19,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "my-gdx-game"
+        appName = "platformer-game"
         gdxVersion = '1.9.6'
         roboVMVersion = '2.3.1'
         box2DLightsVersion = '1.4'
@@ -44,7 +44,11 @@ project(":desktop") {
         compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-        
+        compile "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-desktop"
+        // https://mvnrepository.com/artifact/com.esotericsoftware/kryonet
+        compile group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+        // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+        compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
     }
 }
 
@@ -55,7 +59,11 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-        
+        compile "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
+        // https://mvnrepository.com/artifact/com.esotericsoftware/kryonet
+        compile group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+        // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+        compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
     }
 }
 
