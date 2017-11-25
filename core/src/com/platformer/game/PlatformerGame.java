@@ -21,7 +21,7 @@ public class PlatformerGame extends Game {
     @Override
     public void create () {
         game = this;
-        // test
+        // test add comment
         demoScreen = new DemoScreen(game);
         mainMenuScreen = new MainMenuScreen(game);
 
